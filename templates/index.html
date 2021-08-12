@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
+    <title>Name Table</title>
+</head>
+<body>
+    <div class="container">
+        <table class="table" style="border-style: solid 10px black;">
+            <thead style="background-color:lightblue; text-align: center;">
+                <tr>
+                    <th scope="col" style="color:yellow;">First Name</th>
+                    <th scope="col" style="color:yellow;">Last Name</th>
+                    <th scope="col" style="color: yellow;">Full Name</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center; background-color: lightpink;">
+                {% for user in users %}
+                <tr>
+                    <td style="color:blue">{{user['first_name']}}</td>
+                    <td style="color:blue">{{user['last_name']}}</td>
+                    <td style="color:blue">{{user['first_name']}} {{user['last_name']}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
